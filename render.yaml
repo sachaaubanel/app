@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: bureau-equipe-reservations
+    runtime: node
+    region: frankfurt
+    plan: starter
+    buildCommand: echo "Zero npm dependencies"
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 22.16.0
+      - key: DB_PATH
+        value: /var/data/bureau.sqlite
+      - key: TEAM_PASSWORD
+        sync: false
+    disk:
+      name: bureau-data
+      mountPath: /var/data
+      sizeGB: 1
