@@ -1,0 +1,245 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bureau · Réservations</title>
+<style>
+:root{--ink:#213d36;--green:#376b51;--light:#e7efe6;--muted:#7b847d;--line:#e2e6de;--paper:#fff;--bg:#f5f6f2}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px 'Segoe UI',Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer;color:inherit}button:focus-visible,a:focus-visible{outline:3px solid #b4be62;outline-offset:3px}button:disabled{cursor:not-allowed;opacity:.5}aside{width:220px;position:fixed;inset:0 auto 0 0;background:#fff;border-right:1px solid var(--line);padding:32px 21px;display:flex;flex-direction:column}.brand{font-size:26px;letter-spacing:-1.5px;font-weight:700;display:flex;align-items:center;gap:10px}.mark{background:var(--ink);color:white;border-radius:10px;width:34px;height:34px;display:grid;place-items:center;font-size:23px;letter-spacing:-4px;padding-right:4px}.sub{color:var(--muted);font-size:11px;letter-spacing:2px;margin:8px 0 45px 44px}.nav{border:0;background:none;text-align:left;padding:14px 16px;border-radius:9px;margin:4px 0;display:flex;gap:12px;align-items:center}.nav.active{background:var(--light);color:var(--green);font-weight:600}.aside-bottom{margin-top:auto;padding:16px 8px;color:var(--muted);font-size:12px;line-height:1.7}.aside-bottom b{color:var(--ink)}main{margin-left:220px;padding:0 40px 35px;max-width:1800px}.top{height:80px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}.crumb{color:var(--muted);font-size:12px}.pill{display:inline-flex;align-items:center;gap:8px;background:white;border:1px solid var(--line);border-radius:25px;padding:9px 14px;font-size:12px}.dot{width:7px;height:7px;border-radius:50%;background:#739e6a}.heading{display:flex;justify-content:space-between;align-items:center;margin:32px 0 25px}h1{font-size:34px;letter-spacing:-1.2px;margin:0 0 9px;font-weight:650}p{color:var(--muted);margin:0;line-height:1.6}h2{font-size:18px;letter-spacing:-.4px;margin:0}h3{margin:0;font-size:15px}.intro-label{font-size:10px;letter-spacing:1.8px;color:var(--green);font-weight:700;margin-bottom:10px}.btn{border:1px solid var(--line);background:white;border-radius:8px;padding:11px 15px}.primary{background:var(--ink);border-color:var(--ink);color:#fff}.grid{display:grid;grid-template-columns:minmax(370px,1.05fr) minmax(400px,1fr);gap:24px;align-items:start}.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}.card-head{padding:23px 24px 17px;display:flex;justify-content:space-between;align-items:center}.eyebrow{font-size:11px;color:var(--muted);margin-top:7px}.step{font-size:10px;color:var(--green);background:var(--light);padding:6px 9px;border-radius:5px;font-weight:700;letter-spacing:.8px}.map{margin:4px 22px 0;background:#f7f8f4;border:1px solid #eceee7;border-radius:9px;position:relative;padding:22px 10px 6px}.map svg{width:100%;max-height:410px;display:block}.room rect.space{stroke:#a1afa1;stroke-width:2;fill:#eef2e9;transition:.18s}.room:hover rect.space{fill:#dae7d7;stroke:var(--green)}.room.selected rect.space{fill:#d2e3cc;stroke:#376b51;stroke-width:3}.room.full rect.space{fill:#eee5df;stroke:#b6a69b}.room text{fill:var(--ink);pointer-events:none}.room{cursor:pointer;outline:0}.room:focus rect.space{stroke:#8d9b35;stroke-width:4}.map-caption{text-align:center;font-size:10px;color:#999f95;margin:6px 0 10px}.legend{display:flex;gap:18px;font-size:11px;color:var(--muted);padding:18px 24px}.legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;background:#9cba8c}.legend i.full{background:#c0ab9d}.legend i.sel{background:#376b51}.rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 24px 22px}.room-chip{text-align:left;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px;font-size:12px}.room-chip.selected{border-color:var(--green);background:#f0f5ed}.room-chip small{display:block;color:var(--muted);margin-top:5px;font-size:10px}.notice{font-size:11px;color:#8b7956;background:#f9f6ee;padding:12px 24px;border-top:1px solid #eee8db;line-height:1.6}.selected-room{display:flex;align-items:center;gap:12px;padding:15px 24px;background:#fafbf8;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.room-icon{height:39px;width:39px;display:grid;place-items:center;border:1px solid #d4decf;background:#eaf1e6;border-radius:9px;font-size:20px}.selected-room p{font-size:11px}.capacity{margin-left:auto;font-size:11px;background:#edf2e9;border-radius:20px;padding:6px 9px}.controls{padding:18px 24px 12px;display:flex;justify-content:space-between;align-items:center;gap:10px}.seg{display:flex;background:#f1f3ee;padding:3px;border-radius:7px;gap:2px}.seg button{border:0;background:none;border-radius:5px;padding:7px 12px;font-size:11px;color:var(--muted)}.seg button.active{background:white;color:var(--ink);box-shadow:0 1px 3px #0001}.arrows{display:flex;align-items:center;gap:6px}.arrows button{background:white;border:1px solid var(--line);width:28px;height:28px;border-radius:5px}.date-row{padding:0 24px 15px;display:flex;align-items:center;justify-content:space-between}.date-row input{width:132px;color:var(--muted);border:1px solid var(--line);padding:5px;border-radius:5px;font-size:11px}.shortcuts{display:flex;gap:6px;padding:0 24px 15px;flex-wrap:wrap}.shortcuts button{border:1px solid var(--line);border-radius:20px;background:#fff;font-size:10px;padding:6px 10px}.calendar{padding:0 24px}.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}.day-head{font-size:10px;color:var(--muted);text-align:center;padding:5px 0 8px}.day-head b{display:block;color:var(--ink);font-size:13px;margin-top:5px}.slot{border:1px solid #dce5d6;border-radius:6px;background:#f5f8f0;min-height:62px;font-size:10px;width:100%;padding:7px 2px;margin-bottom:5px;transition:.15s}.slot strong{display:block;font-size:11px;margin-bottom:6px;font-weight:600}.slot.selected{background:var(--green);border-color:var(--green);color:white}.slot.full{background:#f3efeb;border-color:#e7e0da;color:#ab9b91}.slot:disabled{opacity:.65}.month{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}.month-cell{border:1px solid var(--line);border-radius:5px;min-height:77px;padding:5px 3px}.month-cell b{font-size:10px;display:block;margin-bottom:3px}.month-cell .slot{min-height:0;margin-bottom:3px;padding:5px 1px;font-size:9px;border-radius:3px}.month-cell .slot strong{display:inline;font-size:9px;margin:0}.month-cell .slot span{display:none}.dayview{display:grid;grid-template-columns:1fr 1fr;gap:12px}.dayview .slot{min-height:90px}.calendar-help{font-size:10px;color:var(--muted);margin:10px 0 16px;line-height:1.6}.summary{margin:0 24px 16px;border:1px solid var(--line);border-radius:8px;padding:12px;font-size:11px;background:#fafbf8;display:flex;justify-content:space-between;align-items:center}.summary button{border:0;background:none;font-size:10px;text-decoration:underline}.form{padding:0 24px 24px}.form-row{display:grid;grid-template-columns:1fr 100px;gap:12px}.field label{display:block;font-size:11px;margin:0 0 7px}.field input,.field select{border:1px solid var(--line);border-radius:7px;padding:10px 11px;width:100%;background:white;color:var(--ink);outline:none}.field input:focus{border-color:var(--green)}.submit{width:100%;margin-top:15px;font-size:12px;padding:13px}.form-note{font-size:10px;text-align:center;margin-top:9px;color:var(--muted)}.bottom{margin-top:24px}.booking-list{padding:0 24px 20px}.booking-row{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-top:1px solid var(--line);gap:12px}.booking-row p{font-size:11px}.booking-row b{font-size:12px}.booking-row .btn{font-size:10px;padding:7px 10px}.empty{padding:14px 0 8px;color:var(--muted);font-size:12px}.footer{display:flex;justify-content:space-between;margin-top:20px;color:var(--muted);font-size:10px}.toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:var(--ink);color:white;padding:15px 24px;border-radius:10px;box-shadow:0 6px 30px #0002;z-index:100;max-width:90%;font-size:12px;display:none}.error{color:#a44530;background:#fff4ef;border-radius:7px;padding:10px;font-size:12px;margin-bottom:12px;display:none}.mode{padding:10px 16px;background:#fff6dc;border:1px solid #eadfb8;border-radius:8px;font-size:12px;margin:18px 0 0;color:#7e6936}.hidden{display:none!important}dialog{border:1px solid var(--line);border-radius:15px;padding:28px;color:var(--ink);width:420px;max-width:92vw;box-shadow:0 20px 100px #0002}dialog::backdrop{background:#132a2566}dialog p{margin:15px 0;font-size:13px}dialog .btn{margin-right:7px}
+@media(min-width:1500px){main{padding-left:60px;padding-right:60px}.map svg{max-height:490px}}@media(max-width:1150px){aside{width:175px;padding:26px 14px}main{margin-left:175px;padding:0 22px 25px}.grid{grid-template-columns:1fr}.map svg{max-height:380px}.brand{font-size:23px}.heading h1{font-size:30px}}@media(max-width:650px){aside{position:static;width:auto;padding:18px;display:flex;flex-direction:row;align-items:center;gap:10px;border-bottom:1px solid var(--line)}.brand{font-size:21px}.mark{width:28px;height:28px;font-size:18px}.sub,.aside-bottom{display:none}.nav{padding:8px;font-size:11px;margin-left:auto}.nav+.nav{margin-left:0}main{margin:0;padding:0 13px 22px}.top{height:52px}.heading{margin:25px 0 20px}.heading h1{font-size:28px}.heading p{font-size:12px}.heading>.pill{display:none}.grid{gap:17px}.card-head{padding:19px}.map{margin:0 12px}.rooms{padding:0 17px 17px}.controls,.date-row{padding-left:17px;padding-right:17px}.calendar{padding:0 12px}.summary{margin-left:17px;margin-right:17px}.form{padding:0 17px 20px}.slot{font-size:9px}.slot strong{font-size:10px}.capacity{font-size:10px}.footer{line-height:1.6}.footer span:last-child{display:none}.pill{font-size:10px;padding:7px 10px}.notice{padding:10px 18px}.month-cell{padding:4px 2px}.month-cell .slot{font-size:8px}.month-cell .slot strong{font-size:8px}.booking-list{padding:0 18px 18px}}
+
+/* Nouvelle disposition fidèle au plan fourni */
+.map{background:#fff;border-color:#e8ebe4;padding:10px 8px 2px}
+.map svg{max-height:470px}
+.map-caption{font-size:11px;margin:6px 0 12px}
+.room rect.space{fill:#cca15f;stroke:transparent;stroke-width:3;transition:fill .18s,stroke .18s,filter .18s}
+.room.green rect.space{fill:#12e99a}
+.room:hover rect.space{fill:#dcaf69;filter:brightness(1.035)}
+.room.green:hover rect.space{fill:#35edaa}
+.room.selected rect.space{stroke:#254f3d;stroke-width:5;fill:#d6ad6f}
+.room.green.selected rect.space{fill:#12e99a}
+.room.full rect.space{fill:#b5a79a}
+.room text{fill:#1b211f;font-size:22px;pointer-events:none}
+.room .map-status{font-size:10px;fill:#263a32;opacity:.8}
+.room:focus rect.space{stroke:#254f3d;stroke-width:5}
+.legend i{background:#cca15f}
+.legend i.full{background:#b5a79a}
+.top-actions{display:flex;gap:10px;align-items:center}
+.logout-btn{padding:8px 12px;font-size:11px}
+.editing-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 24px 14px;border:1px solid #d5d7bd;background:#f7f8ee;padding:11px;border-radius:8px;font-size:12px}
+.editing-bar button{border:0;background:none;color:#376b51;cursor:pointer;text-decoration:underline}
+.booking-person{display:inline-block;font-size:10px;border-radius:16px;padding:4px 8px;background:#eef2ea;color:#45694c;margin-top:6px}
+.booking-actions{display:flex;gap:7px;flex-wrap:wrap}
+.booking-row{align-items:flex-start}
+.booking-row p{overflow-wrap:anywhere;line-height:1.6}
+.login-gate{position:fixed;inset:0;z-index:200;background:rgba(242,246,239,.97);display:grid;place-items:center;padding:20px;backdrop-filter:blur(8px)}
+.login-panel{width:min(100%,430px);padding:40px 38px;background:#fff;border:1px solid #e2e6de;border-radius:18px;box-shadow:0 20px 80px #12332112}
+.login-logo{display:grid;place-items:center;width:48px;height:48px;border-radius:12px;background:#213d36;color:#fff;font-size:30px;margin-bottom:25px}
+.login-panel h2{font-size:27px;line-height:1.2;margin-bottom:13px}
+.login-panel p{font-size:13px;margin:0 0 25px}
+.login-panel label{display:block;font-size:12px;margin-bottom:8px;font-weight:600}
+.login-panel input{display:block;width:100%;padding:13px;border:1px solid #d5ded3;border-radius:9px;margin-bottom:12px;background:white;font:inherit}
+.login-panel button{width:100%;padding:13px}
+.login-panel .login-fine{font-size:11px;color:#8c9887;text-align:center;margin:18px 0 0}
+.login-error{margin:0 0 12px;padding:10px;background:#fff0e9;border-radius:7px;color:#9d402e;font-size:12px}
+@media(max-width:650px){.room text{font-size:20px}.login-panel{padding:28px 22px}.logout-btn{font-size:10px}.top-actions{gap:5px}.editing-bar{margin-left:17px;margin-right:17px}.booking-actions{flex-direction:column}}
+</style></head><body>
+<aside><div><div class="brand"><span class="mark">▥</span> bureau<span style="color:#88a17c">.</span></div><div class="sub">NOTRE ESPACE COMMUN</div></div><button class="nav active" id="navPlan">▦ <span>Réserver une salle</span></button><button class="nav" id="navMine">▤ <span>Planning de l’équipe</span></button><div class="aside-bottom"><b>Un bureau, à votre rythme.</b><br>Choisissez votre salle et les<br>demi-journées qui vous conviennent.<hr style="border:0;border-top:1px solid var(--line);margin:20px 0">◷ Matin · 8h30 – 12h30<br>◷ Après-midi · 13h30 – 18h</div></aside>
+<main><header class="top"><div class="crumb">Notre bureau <span style="margin:0 10px;color:#adb5a8">/</span> Réservations</div><div class="top-actions"><span class="pill"><i class="dot" id="liveDot"></i><span id="connection">Connexion au planning…</span></span><button class="btn logout-btn hidden" id="logout" type="button">Quitter</button></div></header><div id="mode" class="mode hidden"></div><section class="heading"><div><div class="intro-label">BIENVENUE AU BUREAU</div><h1>Votre place vous attend.</h1><p>Une salle, quelques demi-journées. Organisez votre présence en un instant.</p></div><span class="pill" id="todayLabel"></span></section>
+<div class="grid" id="workspace"><section class="card"><div class="card-head"><div><h2>Choisissez votre salle</h2><div class="eyebrow">Cliquez directement sur le plan du bureau</div></div><span class="step">ÉTAPE 01</span></div><div class="map"><svg viewBox="0 0 519 497" role="group" aria-label="Plan du bureau conforme au croquis fourni, avec six espaces réservables">
+  <rect width="519" height="497" fill="#ffffff" />
+  <rect x="173" y="177" width="206" height="100" rx="1" fill="#b8b8b8" />
+  <text x="276" y="230" text-anchor="middle" fill="#626262" font-size="12" letter-spacing="1.2" font-weight="600">ZONE CENTRALE</text>
+  <g id="mapRooms"></g>
+  <g stroke="#202020" stroke-width="2.5" fill="none" pointer-events="none">
+     <path d="M163 182v31 M159 182h8 M159 213h8 M163 237v31 M159 237h8 M159 268h8" />
+     <path d="M226 163v8 M266 163v8 M227 168h39" />
+     <path d="M348 163v8 M379 163v8 M349 168h30" />
+     <path d="M348 282v8 M379 282v8 M349 287h30" />
+  </g>
+</svg><div class="map-caption">Disposition reprise de votre plan · cliquez sur un espace</div></div><div class="legend"><span><i></i>Disponible</span><span><i class="sel"></i>Salle sélectionnée</span><span><i class="full"></i>Complète</span></div><div class="rooms" id="roomChips"></div><div class="notice">Salles 1 et 2 : jusqu’à 2 personnes. Autres salles : 1 personne.<br>La disponibilité du plan correspond au jour sélectionné.</div></section>
+<section class="card"><div class="card-head"><div><h2>Composez votre planning</h2><div class="eyebrow">Sélectionnez une ou plusieurs demi-journées</div></div><span class="step">ÉTAPE 02</span></div><div class="selected-room"><span class="room-icon">▥</span><div><h3 id="roomTitle">Salle 1</h3><p>Votre espace de travail</p></div><span class="capacity" id="capacity">2 places</span></div><div class="controls"><div class="seg" id="views"><button data-view="day">Jour</button><button data-view="week" class="active">Semaine</button><button data-view="month">Mois</button></div><div class="arrows"><button id="prev" aria-label="Période précédente">‹</button><button id="next" aria-label="Période suivante">›</button><button id="today" style="width:auto;padding:0 8px;font-size:10px">Aujourd’hui</button></div></div><div class="date-row"><b id="period" style="font-size:13px"></b><input type="date" id="date" aria-label="Choisir une date"></div><div class="shortcuts"><button id="allDay">Toute la journée</button><button id="mornings">Les matins</button><button id="afternoons">Les après-midi</button><button id="allWeek">Tous les créneaux</button></div><div class="calendar" id="calendar"></div><div class="calendar" style="padding-top:0"><div class="calendar-help">Matin 8h30–12h30 · Après-midi 13h30–18h<br>Les places restantes sont indiquées pour chaque créneau.</div></div><div class="editing-bar hidden" id="editingBar"><span id="editingText"></span><button type="button" id="stopEditing">Quitter la modification</button></div><div class="summary"><span id="selectionCount">Aucune demi-journée sélectionnée</span><button id="clear">Effacer</button></div><form class="form" id="bookingForm"><div class="error" id="error" role="alert"></div><div class="form-row"><div class="field"><label for="name">Votre prénom et nom</label><input id="name" placeholder="Ex. Camille Martin" maxlength="80" required autocomplete="name"></div><div class="field"><label for="quantity">Personnes</label><select id="quantity"><option value="1">1 personne</option><option value="2">2 personnes</option></select></div></div><button class="btn primary submit" id="submit" disabled>Choisissez vos demi-journées →</button><div class="form-note">Les réservations et leurs modifications sont visibles en direct par toute l’équipe.</div></form></section></div>
+<section class="card bottom" id="mine"><div class="card-head"><div><h2>Réservations de toute l’équipe</h2><div class="eyebrow">Planning commun · chaque membre peut voir, modifier et annuler les réservations</div></div><button class="btn" id="refresh" style="font-size:11px">↻ Actualiser</button></div><div class="booking-list" id="bookingList"></div></section><footer class="footer"><span>Bureau. · Un espace partagé, simplement.</span><span>8 places · 6 salles · Réservation par demi-journée</span></footer></main><div class="login-gate hidden" id="loginGate" role="dialog" aria-modal="true" aria-label="Accès au planning partagé">
+ <div class="login-panel"><span class="login-logo">▥</span><div class="intro-label">BUREAU PARTAGÉ</div><h2>Le planning de notre équipe.</h2><p>Entrez le code commun pour accéder aux réservations et les gérer ensemble.</p>
+ <form id="loginForm"><label for="teamPassword">Code d’accès équipe</label><input id="teamPassword" type="password" placeholder="Votre code équipe" autocomplete="current-password" required minlength="10" />
+ <div id="loginError" class="login-error hidden"></div><button class="btn primary" type="submit" id="loginSubmit">Accéder au planning →</button></form>
+ <p class="login-fine">Un planning commun, synchronisé automatiquement.</p></div>
+</div><div class="toast" id="toast" role="status" aria-live="polite"></div><dialog id="cancelDialog"><h2>Annuler cette réservation ?</h2><p>Les places seront de nouveau disponibles pour l’équipe.</p><button class="btn primary" id="confirmCancel">Annuler la réservation</button><button class="btn" id="closeDialog">Conserver</button></dialog>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+const parse=s=>new Date(s+'T12:00:00');
+const nowParis=()=>new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Paris'}));
+const todayISO=iso(nowParis());
+const fmt=(d,o)=>d.toLocaleDateString('fr-FR',o);
+const cap=r=>r<=2?2:1;
+const LOCAL=location.protocol==='file:'||new URLSearchParams(location.search).get('demo')==='1'&&location.hostname==='localhost';
+let room=1,view='week',anchor=parse(todayISO),selected=new Set(),records=[],busy=false,ready=false;
+let editGroup=null,cancelGroup=null,events=null,toastTimer,loading=false;
+let userName='';try{userName=localStorage.getItem('bureau-name')||''}catch{}
+$('name').value=userName;
+
+// Positions exactes du croquis transmis, dans le repère 519 × 497 px.
+const ROOMS=[
+ {id:1,x:17,y:233,w:146,h:229},
+ {id:2,x:17,y:27,w:146,h:194},
+ {id:3,x:173,y:27,w:146,h:140},
+ {id:4,x:328,y:287,w:146,h:175},
+ {id:5,x:328,y:27,w:146,h:140},
+ {id:6,x:387,y:177,w:87,h:100,green:true},
+];
+function toast(t){$('toast').textContent=t;$('toast').style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').style.display='none',4500)}
+function error(t){$('error').textContent=t;$('error').style.display=t?'block':'none'}
+function authLost(){ready=false;if(events){events.close();events=null}$('loginGate').classList.remove('hidden');$('logout').classList.add('hidden');$('connection').textContent='Accès réservé à l’équipe'}
+function countIn(r,d,h){return records.filter(x=>x.room===r&&x.date===d&&x.half===h).reduce((n,x)=>n+x.quantity,0)}
+function available(d,h){return cap(room)-countIn(room,d,h)}
+function valid(d,h){return ready&&d>=todayISO&&remainingForCurrent(d,h)>=Number($('quantity').value)}
+function slotsFor(){
+ if(view==='day')return [anchor];
+ if(view==='month')return Array.from({length:new Date(anchor.getFullYear(),anchor.getMonth()+1,0).getDate()},(_,i)=>new Date(anchor.getFullYear(),anchor.getMonth(),i+1,12));
+ const start=new Date(anchor);start.setDate(start.getDate()-((start.getDay()+6)%7));
+ return Array.from({length:7},(_,i)=>{const d=new Date(start);d.setDate(d.getDate()+i);return d})
+}
+function changeRoom(r,clear=true){if(busy)return;room=r;if(clear&&!editGroup)selected.clear();$('quantity').innerHTML=Array.from({length:cap(r)},(_,i)=>`<option value="${i+1}">${i+1} personne${i?'s':''}</option>`).join('');if(editGroup)keepCurrentSelection();error('');render()}
+function map(){
+ const d=iso(anchor);
+ $('mapRooms').innerHTML=ROOMS.map(r=>{
+  const has=!!records.filter(x=>x.room===r.id&&x.date===d).length;
+  const free=Math.max(cap(r.id)-countIn(r.id,d,'AM'),cap(r.id)-countIn(r.id,d,'PM'));
+  const narrow=r.w<100,txtY=r.y+r.h/2+3;
+  return `<g class="room ${r.green?'green':''} ${room===r.id?'selected':''} ${free===0?'full':''}" role="button" tabindex="0" data-room="${r.id}" aria-label="Salle ${r.id}, ${cap(r.id)} place${cap(r.id)>1?'s':''}" aria-pressed="${room===r.id}">
+   <rect class="space" x="${r.x}" y="${r.y}" width="${r.w}" height="${r.h}" />
+   <text x="${r.x+r.w/2}" y="${txtY-4}" text-anchor="middle" font-weight="700" style="font-size:${narrow?15:25}px">${narrow?'S. '+r.id:'Salle '+r.id}</text>
+   <text class="map-status" x="${r.x+r.w/2}" y="${txtY+17}" text-anchor="middle" style="font-size:${narrow?9:11}px">${narrow?(has?'Occupée':'1 place'):(free===0?'Complète':cap(r.id)+' place'+(cap(r.id)>1?'s':''))}</text>
+   ${room===r.id?`<circle cx="${r.x+r.w-13}" cy="${r.y+14}" r="7" fill="#254f3d"/><path d="M${r.x+r.w-16} ${r.y+14}l2 2 4-4" fill="none" stroke="white" stroke-width="1.5"/>`:''}
+  </g>`
+ }).join('');
+ $('roomChips').innerHTML=ROOMS.map(r=>`<button class="room-chip ${room===r.id?'selected':''}" data-room="${r.id}" aria-pressed="${room===r.id}">Salle ${r.id}<small>${cap(r.id)} place${cap(r.id)>1?'s':''}</small></button>`).join('');
+ document.querySelectorAll('[data-room]').forEach(el=>{el.onclick=()=>changeRoom(Number(el.dataset.room));el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();changeRoom(Number(el.dataset.room))}}});
+}
+function slot(d,h,compact=false){
+ const key=d+'|'+h,n=available(d,h),own=ownOccupancy(d,h),shown=n+own,names=records.filter(x=>x.room===room&&x.date===d&&x.half===h).map(x=>x.name).join(', '),disabled=!valid(d,h);
+ return `<button type="button" class="slot ${selected.has(key)?'selected':''} ${shown===0?'full':''}" data-slot="${key}" aria-pressed="${selected.has(key)}" ${disabled?'disabled':''} title="${esc(fmt(parse(d),{dateStyle:'full'})+' · '+(h==='AM'?'Matin':'Après-midi')+(names?' · Réservé par : '+names:''))}">
+ <strong>${compact?(h==='AM'?'AM':'PM'):(h==='AM'?'Matin':'Après-midi')}</strong>${compact?' · ':''}${d<todayISO?'Passé':shown===0?'Complet':`${shown} <span>place${shown>1?'s':''}</span>`}</button>`
+}
+function calendar(){
+ const dates=slotsFor();$('date').value=iso(anchor);
+ $('period').textContent=view==='month'?fmt(anchor,{month:'long',year:'numeric'}):view==='day'?fmt(anchor,{weekday:'long',day:'numeric',month:'long'}):`${fmt(dates[0],{day:'numeric'})} – ${fmt(dates[6],{day:'numeric',month:'long',year:'numeric'})}`;
+ document.querySelectorAll('[data-view]').forEach(x=>x.classList.toggle('active',x.dataset.view===view));
+ if(view==='month'){
+  const blank=(dates[0].getDay()+6)%7;
+  $('calendar').innerHTML=`<div class="month">${['L','M','M','J','V','S','D'].map(x=>`<div class="day-head">${x}</div>`).join('')}${'<div></div>'.repeat(blank)}${dates.map(d=>`<div class="month-cell"><b>${d.getDate()}</b>${slot(iso(d),'AM',true)}${slot(iso(d),'PM',true)}</div>`).join('')}</div>`;
+ }else if(view==='day')$('calendar').innerHTML=`<div class="dayview">${slot(iso(anchor),'AM')}${slot(iso(anchor),'PM')}</div>`;
+ else $('calendar').innerHTML=`<div class="week">${dates.map(d=>`<div><div class="day-head">${fmt(d,{weekday:'short'})}<b style="${iso(d)===todayISO?'color:#60874e':''}">${d.getDate()}</b></div>${slot(iso(d),'AM')}${slot(iso(d),'PM')}</div>`).join('')}</div>`;
+ document.querySelectorAll('[data-slot]').forEach(el=>el.onclick=()=>{if(busy)return;const k=el.dataset.slot;selected.has(k)?selected.delete(k):selected.add(k);render()});
+}
+function list(){
+ const groups=new Map();
+ for(const r of records){if(r.date<todayISO)continue;if(!groups.has(r.groupId))groups.set(r.groupId,[]);groups.get(r.groupId).push(r)}
+ const rows=[...groups.entries()].sort((a,b)=>a[1][0].date.localeCompare(b[1][0].date)||a[1][0].room-b[1][0].room);
+ $('bookingList').innerHTML=rows.length?rows.map(([g,items])=>{
+  const first=items[0],days=items.slice(0,10).map(r=>esc(fmt(parse(r.date),{day:'numeric',month:'short'})+' '+(r.half==='AM'?'matin':'après-midi'))).join(' · ');
+  return `<div class="booking-row"><div><b>Salle ${first.room} · ${esc(first.name)}</b><p>${items.length} demi-journée${items.length>1?'s':''} · ${first.quantity} personne${first.quantity>1?'s':''}</p><p>${days}${items.length>10?' · …':''}</p></div>
+  <div class="booking-actions"><button class="btn edit" data-group="${esc(g)}">Modifier</button><button class="btn cancel" data-group="${esc(g)}">Annuler</button></div></div>`
+ }).join(''):`<div class="empty">${ready?'Aucune réservation à venir. Soyez le premier à réserver.':'Connexion au planning en cours…'}</div>`;
+ document.querySelectorAll('.edit').forEach(el=>el.onclick=()=>startEdit(el.dataset.group));
+ document.querySelectorAll('.cancel').forEach(el=>el.onclick=()=>{cancelGroup=el.dataset.group;$('cancelDialog').showModal()});
+}
+function render(){
+ map();calendar();list();
+ $('roomTitle').textContent='Salle '+room;$('capacity').textContent=cap(room)+' place'+(cap(room)>1?'s':'');
+ $('selectionCount').textContent=selected.size?selected.size+' demi-journée'+(selected.size>1?'s':'')+' sélectionnée'+(selected.size>1?'s':''):'Aucune demi-journée sélectionnée';
+ $('submit').disabled=!selected.size||!ready||busy;
+ $('submit').textContent=busy?'Enregistrement…':editGroup?`Enregistrer la modification →`:selected.size?`Confirmer ${selected.size} demi-journée${selected.size>1?'s':''} →`:'Choisissez vos demi-journées →';
+ $('editingBar').classList.toggle('hidden',!editGroup);$('editingText').textContent=editGroup?'Vous modifiez une réservation existante de l’équipe.':'';
+}
+function stopEdit(renderNow=true){if(!editGroup)return;editGroup=null;selected.clear();if(renderNow)render()}
+function startEdit(groupId){
+ const group=records.filter(r=>r.groupId===groupId);if(!group.length)return toast('Réservation introuvable.');
+ editGroup=groupId;room=group[0].room;selected.clear();
+ // Quand on modifie un groupe, ses créneaux restent visibles, même complets.
+ $('quantity').innerHTML=Array.from({length:cap(room)},(_,i)=>`<option value="${i+1}">${i+1} personne${i?'s':''}</option>`).join('');
+ $('quantity').value=String(group[0].quantity);$('name').value=group[0].name;
+ for(const r of group)if(r.date>=todayISO)selected.add(r.date+'|'+r.half);
+ anchor=parse(group[0].date);view=group.length>12?'month':'week';
+ render();$('workspace').scrollIntoView({behavior:'smooth',block:'start'});toast('Modifiez les créneaux puis validez votre changement.');
+}
+function ownOccupancy(d,h){if(!editGroup)return 0;return records.filter(r=>r.groupId===editGroup&&r.room===room&&r.date===d&&r.half===h).reduce((n,r)=>n+r.quantity,0)}
+// Pendant l'édition, on ne bloque pas les places déjà occupées par cette réservation.
+function remainingForCurrent(d,h){return cap(room)-countIn(room,d,h)+ownOccupancy(d,h)}
+function keepCurrentSelection(){for(const k of [...selected]){const [d,h]=k.split('|');if(d<todayISO||remainingForCurrent(d,h)<Number($('quantity').value))selected.delete(k)}}
+function bulk(halves,justDay=false){if(busy)return;let count=0;for(const d of justDay?[anchor]:slotsFor()){
+ if(!justDay&&(d.getDay()===0||d.getDay()===6))continue;
+ for(const h of halves){if(ready&&iso(d)>=todayISO&&remainingForCurrent(iso(d),h)>=Number($('quantity').value)){selected.add(iso(d)+'|'+h);count++}}
+ }if(!count)toast('Aucune place disponible pour cette sélection.');render()}
+
+async function load(){
+ if(loading)return;loading=true;
+ try{
+  if(LOCAL){records=JSON.parse(localStorage.getItem('bureau-demo')||'[]');ready=true;$('connection').textContent='Aperçu local uniquement';$('mode').classList.remove('hidden');$('mode').textContent='Aperçu local : pour partager les réservations avec toute l’équipe, il faut publier le site avec son serveur.'}
+  else{const r=await fetch('/api/bookings',{cache:'no-store',credentials:'same-origin'});if(r.status===401){authLost();return}if(!r.ok)throw Error('Le planning ne répond pas.');const data=await r.json();if(!Array.isArray(data))throw Error('Données invalides.');records=data;ready=true;$('connection').textContent=events?.readyState===1?'En direct · équipe connectée':'Planning partagé';$('mode').classList.add('hidden')}
+  keepCurrentSelection();render();
+ }catch(e){ready=false;$('connection').textContent='Connexion indisponible';error('Impossible de synchroniser le planning. Aucune nouvelle réservation ne peut être confirmée.');render()}
+ finally{loading=false}
+}
+function live(){if(LOCAL||events)return;events=new EventSource('/api/events');events.addEventListener('change',()=>{if(!busy)load()});events.addEventListener('connected',()=>{$('connection').textContent='En direct · équipe connectée';load()});events.onerror=()=>{$('connection').textContent='Reconnexion en cours…'};}
+async function boot(){
+ $('todayLabel').textContent=fmt(nowParis(),{weekday:'long',day:'numeric',month:'long'});
+ if(LOCAL){$('logout').classList.add('hidden');await load();return}
+ try{const r=await fetch('/api/status',{cache:'no-store'});const d=await r.json();if(!d.authenticated)return authLost();$('loginGate').classList.add('hidden');$('logout').classList.remove('hidden');live();await load()}
+ catch{authLost();$('loginError').textContent='Impossible de contacter le serveur. Réessayez plus tard.';$('loginError').classList.remove('hidden')}
+}
+$('loginForm').onsubmit=async e=>{e.preventDefault();$('loginError').classList.add('hidden');$('loginSubmit').disabled=true;
+ try{const r=await fetch('/api/login',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({password:$('teamPassword').value})});const d=await r.json();if(!r.ok)throw Error(d.error||'Connexion refusée.');$('teamPassword').value='';$('loginGate').classList.add('hidden');$('logout').classList.remove('hidden');live();await load()}
+ catch(e){$('loginError').textContent=e.message;$('loginError').classList.remove('hidden')}
+ finally{$('loginSubmit').disabled=false}
+};
+$('logout').onclick=async()=>{await fetch('/api/logout',{method:'POST'});authLost();records=[];render()};
+$('stopEditing').onclick=()=>stopEdit();
+$('allDay').onclick=()=>bulk(['AM','PM'],true);
+$('mornings').onclick=()=>bulk(['AM']);$('afternoons').onclick=()=>bulk(['PM']);$('allWeek').onclick=()=>bulk(['AM','PM']);
+$('clear').onclick=()=>{if(!busy){selected.clear();render()}};
+$('quantity').onchange=()=>{keepCurrentSelection();render()};
+$('date').onchange=()=>{if($('date').value){anchor=parse($('date').value);render()}};
+$('today').onclick=()=>{anchor=parse(todayISO);render()};
+$('prev').onclick=()=>move(-1);$('next').onclick=()=>move(1);
+function move(n){if(view==='month')anchor=new Date(anchor.getFullYear(),anchor.getMonth()+n,1,12);else anchor.setDate(anchor.getDate()+n*(view==='week'?7:1));render()}
+document.querySelectorAll('[data-view]').forEach(el=>el.onclick=()=>{view=el.dataset.view;render()});
+$('navPlan').onclick=()=>{$('workspace').scrollIntoView({behavior:'smooth'});$('navPlan').classList.add('active');$('navMine').classList.remove('active')};
+$('navMine').onclick=()=>{$('mine').scrollIntoView({behavior:'smooth'});$('navMine').classList.add('active');$('navPlan').classList.remove('active')};
+$('refresh').onclick=async()=>{await load();toast(ready?'Planning actualisé.':'Planning indisponible.')};
+$('bookingForm').onsubmit=async e=>{
+ e.preventDefault();if(busy||!ready||!selected.size)return;
+ error('');busy=true;const editing=editGroup;
+ const body={room,name:$('name').value.trim(),quantity:Number($('quantity').value),slots:[...selected].map(k=>{const [date,half]=k.split('|');return {date,half}})};
+ render();
+ try{
+  if(!body.name||body.name.length<2)throw Error('Indiquez votre prénom et votre nom.');
+  if(LOCAL){
+   let all=JSON.parse(localStorage.getItem('bureau-demo')||'[]');
+   if(editing)all=all.filter(r=>r.groupId!==editing);
+   for(const s of body.slots){const occ=all.filter(r=>r.room===room&&r.date===s.date&&r.half===s.half).reduce((n,r)=>n+r.quantity,0);if(occ+body.quantity>cap(room))throw Error('Une place a été réservée entre-temps.');}
+   const g=editing||crypto.randomUUID();body.slots.forEach((s,i)=>all.push({...s,room,name:body.name,quantity:body.quantity,groupId:g,id:g+'-'+i}));
+   localStorage.setItem('bureau-demo',JSON.stringify(all));records=all;
+  }else{
+   const path=editing?'/api/bookings/'+encodeURIComponent(editing):'/api/bookings';
+   const r=await fetch(path,{method:editing?'PATCH':'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});
+   const d=await r.json();if(!r.ok)throw Error(d.error||'Réservation impossible.');
+  }
+  localStorage.setItem('bureau-name',body.name);selected.clear();editGroup=null;
+  toast(editing?'Réservation modifiée pour toute l’équipe.':'Réservation confirmée et partagée avec l’équipe.');await load();
+ }catch(e){error(e.message||'Réservation impossible.');toast('Modification non enregistrée.');await load()}
+ finally{busy=false;render()}
+};
+$('closeDialog').onclick=()=>$('cancelDialog').close();
+$('confirmCancel').onclick=async()=>{
+ if(busy||!cancelGroup)return;busy=true;$('cancelDialog').close();render();
+ try{
+  if(LOCAL){records=JSON.parse(localStorage.getItem('bureau-demo')||'[]').filter(r=>r.groupId!==cancelGroup);localStorage.setItem('bureau-demo',JSON.stringify(records))}
+  else{const r=await fetch('/api/bookings',{method:'DELETE',headers:{'content-type':'application/json'},body:JSON.stringify({groupId:cancelGroup})});const d=await r.json();if(!r.ok)throw Error(d.error||'Annulation impossible.')}
+  if(editGroup===cancelGroup)stopEdit(false);toast('Réservation annulée pour toute l’équipe.');await load();
+ }catch(e){toast(e.message||'Annulation impossible.')}
+ finally{busy=false;cancelGroup=null;render()}
+};
+window.addEventListener('storage',e=>{if(LOCAL&&e.key==='bureau-demo')load()});
+setInterval(()=>{if(!busy&&ready)load()},30000);
+boot();
+
+</script></body></html>
